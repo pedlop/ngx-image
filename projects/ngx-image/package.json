@@ -1,0 +1,14 @@
+{
+  "name": "ngx-image",
+  "version": "1.0.2",
+  "author": {
+    "name": "Pedro Victor Lopes",
+    "email": "pedlop.dev@gmail.com",
+    "url": "https://github.com/pedlop"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  }
+}

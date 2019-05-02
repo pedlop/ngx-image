@@ -1,0 +1,13 @@
+<picture class="image-wrapper">
+  <ng-template [ngIf]="webpFinalImage">
+    <source type="image/webp" [srcset]="webpFinalImage">
+  </ng-template>
+  <ng-template [ngIf]="finalImage">
+    <source [srcset]="finalImage">
+  </ng-template>
+  <ng-template [ngIf]="webp">
+    <source type="image/webp" [srcset]="webp.placeholder">
+  </ng-template>
+  <img #imageElement class="image filtered" [alt]="description" [ngStyle]="customStyle">
+</picture>
+<ng-content></ng-content>

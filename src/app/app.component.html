@@ -1,0 +1,8 @@
+<ng-template ngFor let-image [ngForOf]="images">
+  <plop-image class="image" [regular]="image" [description]="'test'" ratio="1by1"></plop-image>
+</ng-template>
+
+<plop-image class="image" [regular]="webpExample.regular" [webp]="webpExample.webp" [description]="'test'" ratio="1by1">
+</plop-image>
+
+<plop-image class="image" [regular]="shapeExample" [description]="'test'" [inshape]="true" ratio="1by1"></plop-image>

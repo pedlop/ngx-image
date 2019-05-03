@@ -1,8 +1,101 @@
-<ng-template ngFor let-image [ngForOf]="images">
-  <plop-image class="image" [regular]="image" [description]="'test'" ratio="1by1"></plop-image>
-</ng-template>
+<div class="explanatory-content">
+  <plop-image class="image-regular" [regular]="regularExample" [description]="'test'" ratio="1by1">
+    <div class="overlay"></div>
+  </plop-image>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Regular Image Component
+      </mat-panel-title>
+      <mat-panel-description>
+        Image 1by1 regular with Overlay In
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+      <mat-tab label="HTML">
+        <markdown [src]="assets + '/markdown/regular-example/regular-example-html.md'">
+        </markdown>
+      </mat-tab>
+      <mat-tab label="TS">
+        <markdown [src]="assets + '/markdown/regular-example/regular-example-ts.md'">
+        </markdown>
+      </mat-tab>
+      <mat-tab label="SCSS">
+        <markdown [src]="assets + '/markdown/regular-example/regular-example-scss.md'">
+        </markdown>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</div>
 
-<plop-image class="image" [regular]="webpExample.regular" [webp]="webpExample.webp" [description]="'test'" ratio="1by1">
-</plop-image>
+<div class="explanatory-content">
+  <plop-image class="image-webp" [regular]="webpExample.regular" [webp]="webpExample.webp" [description]="'test'"
+    ratio="1by1">
+  </plop-image>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Webp Image Component
+      </mat-panel-title>
+      <mat-panel-description>
+        Image 1by1 webp with border radius 100%
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+      <mat-tab label="HTML">
+        <markdown [src]="assets + '/markdown/webp-example/webp-example-html.md'">
+        </markdown>
+      </mat-tab>
+      <mat-tab label="TS">
+        <markdown [src]="assets + '/markdown/webp-example/webp-example-ts.md'">
+        </markdown>
+      </mat-tab>
+      <mat-tab label="SCSS">
+        <markdown [src]="assets + '/markdown/webp-example/webp-example-scss.md'">
+        </markdown>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</div>
 
-<plop-image class="image" [regular]="shapeExample" [description]="'test'" [inshape]="true" ratio="1by1"></plop-image>
+<div class="explanatory-content">
+  <!-- <div class="explanatory-content"> -->
+  <plop-image class="image-inshape" [regular]="shapeExample" [description]="'test'" ratio="16by9" inshape>
+  </plop-image>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        inshape Image Component
+      </mat-panel-title>
+      <mat-panel-description>
+        Image 16by9 inshape
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+      <mat-tab label="HTML">
+        <markdown [src]="assets + '/markdown/shape-example/shape-example-html.md'">
+        </markdown>
+      </mat-tab>
+      <mat-tab label="TS">
+        <markdown [src]="assets + '/markdown/shape-example/shape-example-ts.md'">
+        </markdown>
+      </mat-tab>
+      <mat-tab label="SCSS">
+        <markdown [src]="assets + '/markdown/shape-example/shape-example-scss.md'">
+        </markdown>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+
+  <!-- </div> -->
+</div>
+
+<div class="random-images">
+  <ng-template let-randomImages [ngIf]="randomImages$ | async">
+    <ng-template ngFor let-randomImage [ngForOf]="randomImages">
+      <plop-image class="image-random" [regular]="randomImage" [description]="'test'" ratio="1by1" inshape>
+      </plop-image>
+    </ng-template>
+  </ng-template>
+</div>

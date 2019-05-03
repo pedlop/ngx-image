@@ -3,6 +3,6 @@ export const environment = {
   application: {
     protocol: 'https',
     host: 'github.com/pedlop/ngx-image',
-    assets: 'src/assets'
+    assets: 'assets'
   }
 };

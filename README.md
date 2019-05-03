@@ -1,4 +1,6 @@
-<h1 align="center">NGX Image</h1>
+# NGX Image
+
+[![npm package](https://nodei.co/npm/ngx-image.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/request/)
 
 Library that lazy load the image in any format on Angular.
 

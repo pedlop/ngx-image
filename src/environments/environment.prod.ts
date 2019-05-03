@@ -2,7 +2,7 @@ export const environment = {
   production: true,
   application: {
     protocol: 'https',
-    host: 'github.com/pedlop/ngx-image',
+    host: 'pedlop.github.io/ngx-image',
     assets: 'assets'
   }
 };

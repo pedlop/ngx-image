@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { ImageModule } from 'projects/ngx-image/src/public-api';
+import { ImageModule } from 'ngx-image';
 
 import { AppComponent } from './app.component';
 

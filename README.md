@@ -1,8 +1,16 @@
-# NGX Image
-
-[![npm package](https://nodei.co/npm/ngx-image.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngx-image/)
-
-Library that lazy load the image in any format on Angular.
+<h1 align="center">NGX Image</h1>
+<p align="center">Library that loads the image progressively in any format in the Angular.</p>
+<div align="center">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedlop/ngx-image.svg?style=for-the-badge">
+  <img alt="npm" src="https://img.shields.io/npm/dw/ngx-image.svg?style=for-the-badge">
+  <img alt="NPM" src="https://img.shields.io/npm/l/ngx-image.svg?style=for-the-badge">
+  <img alt="npm collaborators" src="https://img.shields.io/npm/collaborators/ngx-image.svg?style=for-the-badge">
+</div>
+<div align="center">
+  <a href="https://nodei.co/npm/ngx-image/" target="_blank">
+    <img src="https://nodei.co/npm/ngx-image.png?downloads=true&downloadRank=true&stars=true">
+  </a>
+</div>
 
 ## Description
 
@@ -113,7 +121,7 @@ Now place the _Inputs_ and their respective variables in the `plop-image` image 
 <plop-image class="image" [regular]="webpExample.regular" [webp]="webpExample.webp" [description]="'test'" ratio="1by1">
 </plop-image>
 
-<plop-image class="image" [regular]="shapeExample" [description]="'test'" [inshape]="true" ratio="1by1"></plop-image>
+<plop-image class="image" [regular]="shapeExample" [description]="'test'" ratio="1by1" inshape></plop-image>
 ```
 
 Let's style this
@@ -144,7 +152,7 @@ Let's style this
 | **@Input() regular: [Image](#image)** | Image in any regular format (.png, .jpg).| no |
 | **@Input() wep: [Image](#image)** | Image in any webp format.| yes |
 | **@Input() ratio: [ImageRatio](#image-ratio)** | Image ratio.| no |
-| **@Input() inshape: boolean** | Image object fit in the center. | yes |
+| **@Input() inshape: boolean** | Image object fit in the center. You can set it true or just right it. Default: false. | yes |
 
 
 ## Entities
@@ -164,6 +172,12 @@ Let's style this
 | `4by3`    | 
 | `8by3`    | 
 
+
+## Dependencies and API's used
+
+* [Angular Material](https://material.angular.io/)
+* [ngx-markdown](https://www.npmjs.com/package/ngx-markdown/)
+* [Unsplash](https://unsplash.com/)
 
 ## License
 

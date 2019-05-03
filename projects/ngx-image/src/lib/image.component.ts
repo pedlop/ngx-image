@@ -1,6 +1,6 @@
 import {
   ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, Input, OnDestroy,
-  OnInit, PLATFORM_ID, Renderer2, ViewChild, OnChanges, SimpleChanges
+  OnInit, PLATFORM_ID, Renderer2, ViewChild, OnChanges, SimpleChanges, Attribute
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -19,17 +19,24 @@ export class ImageComponent implements OnInit, OnChanges, OnDestroy {
 
   @ViewChild('imageElement') imageElement: ElementRef<HTMLImageElement>;
 
+
   @Input() regular: Image;
   @Input() webp: Image;
   @Input() description: string;
   @Input() ratio: ImageRatio;
-  @Input() inshape = false;
-
+  @Input()
+  get inshape(): boolean {
+    return this.inshapeValue;
+  }
+  set inshape(inshape: boolean) {
+    this.inshapeValue = inshape != null && `${inshape}` !== 'false';
+  }
 
   customStyle: { [prop: string]: string };
   finalImage: string;
   webpFinalImage: string;
 
+  private inshapeValue = false;
   private isNewImage: boolean;
   private readonly observer: IntersectionObserver;
   private readonly targets: Map<Element, ImageComponent>;

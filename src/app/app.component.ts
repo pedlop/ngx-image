@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Image } from 'projects/ngx-image/src/public-api';
-import { environment } from 'src/environments/environment';
+
+import { Image } from 'ngx-image';
+
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'plop-root',

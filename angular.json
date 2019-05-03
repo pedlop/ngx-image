@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-image": {
+    "ngx-image-example": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-image",
+            "outputPath": "dist/ngx-image-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-image:build"
+            "browserTarget": "ngx-image-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-image:build:production"
+              "browserTarget": "ngx-image-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-image:build"
+            "browserTarget": "ngx-image-example:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "ngx-image-e2e": {
+    "ngx-image-example-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-image:serve"
+            "devServerTarget": "ngx-image-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-image:serve:production"
+              "devServerTarget": "ngx-image-example:serve:production"
             }
           }
         },
@@ -171,5 +171,5 @@
       }
     }
   },
-  "defaultProject": "ngx-image"
+  "defaultProject": "ngx-image-example"
 }

@@ -1,10 +1,96 @@
 :host {
   display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.random-images {
+  width: 100%;
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
+.image-random {
+  width: 20%;
+  margin: 0.5em;
+}
+
+
 .image {
-  width: 25%;
-  margin: 1em;
+}
+
+.explanatory-content {
+  width: 40em;
+  padding: 2em;
+}
+
+// .regular-example {
+//   width: 40em;
+//   padding: 2em;
+// }
+
+// .webp-example {
+//   width: 40em;
+//   padding: 2em;
+//   // margin-right: 2em;
+// }
+
+// .inshape-example {
+//   width: 40em;
+//   padding: 2em;
+// }
+
+.image-inshape, .image-webp, .image-regular {
+  width: 100%;
+}
+
+.image-regular {
+  // box-shadow: 0 0 5px 1px black;
+}
+
+.image-webp {
+  border-radius: 100%;
+  box-shadow: 0 0 5px 1px black;
+  // width: 20em;
+}
+
+.inshape-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.explanatory-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.5s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media  screen and (max-width: 767px) {
+  .explanatory-content {
+    width: 100%;
+    padding: 2em 0;
+  }
 }

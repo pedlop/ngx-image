@@ -15,8 +15,7 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent implements OnInit {
 
-  private readonly assets: string;
-
+  assets: string;
   randomImages$: Observable<Image[]>;
   images: Image[];
   regularExample: Image;

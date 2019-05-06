@@ -14,6 +14,8 @@
 
 ## Description
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fc8fb494a25a42bf88a78e19ce3a1b80)](https://app.codacy.com/app/pedlop/ngx-image?utm_source=github.com&utm_medium=referral&utm_content=pedlop/ngx-image&utm_campaign=Badge_Grade_Settings)
+
 This library offers an easy way to treat images and deliver excellent performance with multiple image formats in browser context with no error if you are using Server Side Rendering.
 
 ## Installation

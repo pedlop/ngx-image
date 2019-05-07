@@ -1,7 +1,7 @@
 {
   "name": "ngx-image-example",
   "description": "Library that lazy load image in regular format and (.webp) in Angular.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "angular",
     "image",
@@ -46,7 +46,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "ngx-image": "^1.0.4",
+    "ngx-image": "^1.0.5",
     "ngx-markdown": "^7.1.5",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",

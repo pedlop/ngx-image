@@ -1,7 +1,7 @@
 {
   "name": "ngx-image",
   "description": "Library that lazy load image in regular format and (.webp) in Angular.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "angular",
     "image",
@@ -18,6 +18,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pedlop/ngx-image"
+  },
+  "bugs": {
+    "url": "https://github.com/pedlop/ngx-image/issues"
   },
   "peerDependencies": {
     "@angular/common": "^7.2.0",

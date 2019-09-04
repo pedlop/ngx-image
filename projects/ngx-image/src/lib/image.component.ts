@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { fromEvent, Subject, timer, iif, of } from 'rxjs';
 import { takeUntil, mergeMap, tap } from 'rxjs/operators';
 
-import { Image, ImageRatio } from './image.model';
+import { Image, ImageRatio, imageRatiosAvailable } from './image.model';
 
 @Component({
   selector: 'plop-image',
@@ -19,11 +19,27 @@ export class ImageComponent implements OnInit, OnChanges, OnDestroy {
 
   @ViewChild('imageElement') imageElement: ElementRef<HTMLImageElement>;
 
-
   @Input() regular: Image;
   @Input() webp: Image;
   @Input() description: string;
-  @Input() ratio: ImageRatio;
+  @Input() get ratio(): string | number {
+    return this.ratioValue;
+  }
+  set ratio(ratio: string | number) {
+    this.ratioValue = ratio;
+    if (!isNaN(ratio as any)) {
+      const ratioNumber = Number(ratio);
+      if (ratioNumber <= 1 && ratioNumber > 0) {
+        this.renderer.setStyle(this.elementRef.nativeElement, 'padding-top', `${ratioNumber * 100}%`);
+      } else {
+        throw new Error('Please provide a valid ratio. Number between 0 and 1 or ImageRatio type.');
+      }
+    } else if (typeof ratio === 'string' && imageRatiosAvailable.find(r => r === ratio)) {
+      this.renderer.addClass(this.elementRef.nativeElement, `image-${this.ratio}`);
+    } else {
+      throw new Error('Please provide a valid ratio. Number between 0 and 1 or ImageRatio type.');
+    }
+  }
   @Input()
   get inshape(): boolean {
     return this.inshapeValue;
@@ -36,6 +52,7 @@ export class ImageComponent implements OnInit, OnChanges, OnDestroy {
   finalImage: string;
   webpFinalImage: string;
 
+  private ratioValue: string | number;
   private inshapeValue = false;
   private isNewImage: boolean;
   private readonly observer: IntersectionObserver;
@@ -79,8 +96,6 @@ export class ImageComponent implements OnInit, OnChanges, OnDestroy {
       'object-fit': 'inherit',
       'object-position': 'inherit'
     };
-
-    this.renderer.addClass(this.elementRef.nativeElement, `image-${this.ratio}`);
 
     fromEvent(this.imageElement.nativeElement, 'load')
       .pipe(

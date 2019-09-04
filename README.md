@@ -141,11 +141,9 @@ Let's style this
 
 ## Properties
 
-#### ImageComponent
+### ImageComponent
 
- * Selector: [plop-image]
-
-### 
+ * Selector: `[plop-image]`
 
 | Name             | Description        | Nullable |
 | ---------------- | ------------------ | -------- |
@@ -157,23 +155,25 @@ Let's style this
 
 ## Entities
 
-#### Image
+### Image
 | Attribute   | Description     | Type | Nullable |
 | ----------- | --------------- | ---- | -------- |
 | `placeholder` | URL of the image to load, this should be the original image, but with a lower quality (to serve as a 'placeholder'), it can be a 100 x 100 resolution to load quickly, few pixels. In the case of only original image (only one URL), this should be either the URL of the original image.  | string | no | 
 | `url` | URL of the image to load, this should be the original image. | string | yes |
 
-#### Image Ratio
-| Options   | 
-| --------- | 
+### Image Ratio
+| Image Ratio Type |
+| ---------------- |
 | `1by1`    | 
 | `16by9`   | 
-| `16by10`  | 
 | `4by3`    | 
 | `8by3`    | 
 
+| Percentage |
+| ---------- |
+| `Number greater than 0 and less than or equal to 1` |
 
-## Dependencies and API's used
+## Dependencies and APIs used to exemplify ngx-image
 
 * [Angular Material](https://material.angular.io/)
 * [ngx-markdown](https://www.npmjs.com/package/ngx-markdown/)

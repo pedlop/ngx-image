@@ -1,7 +1,7 @@
 {
   "name": "ngx-image",
   "description": "Library that lazy load image in regular format and (.webp) in Angular.",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "keywords": [
     "angular",
     "image",

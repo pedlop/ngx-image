@@ -135,7 +135,6 @@ export class ImageComponent implements OnInit, OnChanges, OnDestroy {
       this.regular = changes.regular.currentValue;
       this.isNewImage = true;
       this.renderer.setProperty(this.imageElement.nativeElement, 'src', this.regular.placeholder);
-      this.renderer.addClass(this.imageElement.nativeElement, 'filtered');
       this.changeDetectorRef.markForCheck();
     }
   }
